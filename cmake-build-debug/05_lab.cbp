@@ -80,6 +80,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/Luke/Documents/GitHub/05_lab/GameShelf.cpp">
+			<Option target="05_lab"/>
+		</Unit>
+		<Unit filename="/Users/Luke/Documents/GitHub/05_lab/GameShelf.h">
+			<Option target="05_lab"/>
+		</Unit>
+		<Unit filename="/Users/Luke/Documents/GitHub/05_lab/Show.cpp">
+			<Option target="05_lab"/>
+		</Unit>
+		<Unit filename="/Users/Luke/Documents/GitHub/05_lab/Show.h">
+			<Option target="05_lab"/>
+		</Unit>
 		<Unit filename="/Users/Luke/Documents/GitHub/05_lab/main.cpp">
 			<Option target="05_lab"/>
 		</Unit>

@@ -1,8 +1,11 @@
 #include <iostream>
 
 #include "Show.h"
+#include "GameShelf.h"
 
 using namespace std;
+
+//fix  TODO: getline()
 
 void fixBadInput() {
     cin.clear();
@@ -11,8 +14,9 @@ void fixBadInput() {
 }
 
 int main() {
-
     bool running = true;
+    GameShelf userShelf = GameShelf(); //why can't we do this?
+
     while (running) {
         cout << "Press 1 to add a board game to the shelf" << endl;
         cout << "Press 2 to remove a board game from the shelf" << endl;
@@ -58,21 +62,28 @@ b.	When removing a board game you may want to display the attribute values set w
                         continue;
                     } else {
                         cout << "\n";
+                        Show *userShow = new Show(title, description);
+                        userShelf.add(*userShow ); //fix this
                         break;
                     }
                 }
                 break;
             }
             case 2: {
-
+                userShelf.remove();
+                break;
+                //run remove and display attributes
             }
             case 3: {
-
+                cout << userShelf.getCurrGameCount() << endl;
+                break;
+                //show how many board games are on the shelf
             }
             case 4: {
-                running = false
+                running = false;
+                break;
+                //quit program
             }
-
         }
     }
 

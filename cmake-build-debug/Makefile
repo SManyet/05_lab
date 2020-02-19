@@ -123,6 +123,60 @@ depend:
 	$(MAKE) -f CMakeFiles/05_lab.dir/build.make CMakeFiles/05_lab.dir/build
 .PHONY : 05_lab/fast
 
+GameShelf.o: GameShelf.cpp.o
+
+.PHONY : GameShelf.o
+
+# target to build an object file
+GameShelf.cpp.o:
+	$(MAKE) -f CMakeFiles/05_lab.dir/build.make CMakeFiles/05_lab.dir/GameShelf.cpp.o
+.PHONY : GameShelf.cpp.o
+
+GameShelf.i: GameShelf.cpp.i
+
+.PHONY : GameShelf.i
+
+# target to preprocess a source file
+GameShelf.cpp.i:
+	$(MAKE) -f CMakeFiles/05_lab.dir/build.make CMakeFiles/05_lab.dir/GameShelf.cpp.i
+.PHONY : GameShelf.cpp.i
+
+GameShelf.s: GameShelf.cpp.s
+
+.PHONY : GameShelf.s
+
+# target to generate assembly for a file
+GameShelf.cpp.s:
+	$(MAKE) -f CMakeFiles/05_lab.dir/build.make CMakeFiles/05_lab.dir/GameShelf.cpp.s
+.PHONY : GameShelf.cpp.s
+
+Show.o: Show.cpp.o
+
+.PHONY : Show.o
+
+# target to build an object file
+Show.cpp.o:
+	$(MAKE) -f CMakeFiles/05_lab.dir/build.make CMakeFiles/05_lab.dir/Show.cpp.o
+.PHONY : Show.cpp.o
+
+Show.i: Show.cpp.i
+
+.PHONY : Show.i
+
+# target to preprocess a source file
+Show.cpp.i:
+	$(MAKE) -f CMakeFiles/05_lab.dir/build.make CMakeFiles/05_lab.dir/Show.cpp.i
+.PHONY : Show.cpp.i
+
+Show.s: Show.cpp.s
+
+.PHONY : Show.s
+
+# target to generate assembly for a file
+Show.cpp.s:
+	$(MAKE) -f CMakeFiles/05_lab.dir/build.make CMakeFiles/05_lab.dir/Show.cpp.s
+.PHONY : Show.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +213,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... 05_lab"
+	@echo "... GameShelf.o"
+	@echo "... GameShelf.i"
+	@echo "... GameShelf.s"
+	@echo "... Show.o"
+	@echo "... Show.i"
+	@echo "... Show.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

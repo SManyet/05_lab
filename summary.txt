@@ -1,0 +1,22 @@
+1.2: abstractly model a shelf of games
+    a. needs array for multiple board games (use lab4 or strings), global const
+    10 for max # of board games
+    b. variable for current # of board games
+    c. default constructure inits empty
+    d. functions add and remove games from shelf
+        add should recieve game
+        remove should return a board game
+    e. return curr # of games
+    f. implement
+    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    GameShelf.h & .cpp
+        attributes: maxGameCount, CurrGameCount 
+        empty default
+        push and pop
+        getCurrGameCount()
+
+
+1.3: describe add and remove implementations (not code!)
+
+2.1: test the shelf, ask user for class method to performs
+    a. when adding, dynamically (new) create a board game (string)

@@ -1,18 +1,18 @@
-#ifndef
+#ifndef GAMESHELF_H
 #define GAMESHELF_H
 
-
+#include "Show.h"
 
 class GameShelf {
     private:
-        std::string shelf[];
-        int maxGameCount;
+        Show shelf[10];
+        int const maxGameCount = 10;
         int currGameCount;
 
     public:
         GameShelf();
-        void add(std::string &);
-        std::string remove();
+        void add(Show &);
+        Show remove();
         int getCurrGameCount();
 };
 #endif

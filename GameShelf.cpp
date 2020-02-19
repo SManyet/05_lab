@@ -13,9 +13,10 @@ void GameShelf::add(Show &show) {
 
 Show GameShelf::remove() {
     currGameCount--;
+    
     Show tempShow = shelf[currGameCount];
-    Show *Showptr = &shelf[currGameCount];
-    Showptr = new Show();
+    tempShow.details();
+
     return tempShow;
 }
 

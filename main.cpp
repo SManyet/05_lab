@@ -70,12 +70,18 @@ b.	When removing a board game you may want to display the attribute values set w
                 break;
             }
             case 2: {
+                cout << "\n";
+                cout << "This is the game that was removed: " << endl;
+                cout << "\n";
                 userShelf.remove();
+                cout << "\n";
                 break;
                 //run remove and display attributes
             }
             case 3: {
-                cout << userShelf.getCurrGameCount() << endl;
+                cout << "\n";
+                cout << "This is how many games are on the shelf: " << userShelf.getCurrGameCount() << endl;
+                cout << "\n";
                 break;
                 //show how many board games are on the shelf
             }

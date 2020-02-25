@@ -7,17 +7,27 @@ GameShelf::GameShelf() {
 }
 
 void GameShelf::add(Show &show) {
-    shelf[currGameCount] = show;
-    currGameCount++;
+    if ( currGameCount != 1 ) {
+        shelf[currGameCount] = show;
+        currGameCount++;
+    } else {
+        throw FullShelf();
+    }
 }
 
 Show GameShelf::remove() {
-    currGameCount--;
-    
-    Show tempShow = shelf[currGameCount];
-    tempShow.details();
 
-    return tempShow;
+    if (currGameCount != 0) {
+        currGameCount--;
+
+        Show tempShow = shelf[currGameCount];
+        cout << "This is the board game that was removed: " << endl;
+        tempShow.details();
+
+        return tempShow;
+    } else {
+        throw EmptyShelf();
+    }
 }
 
 int GameShelf::getCurrGameCount() {

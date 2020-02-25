@@ -15,7 +15,7 @@ void fixBadInput() {
 
 int main() {
     bool running = true;
-    GameShelf userShelf = GameShelf(); //why can't we do this?
+    GameShelf userShelf = GameShelf();
 
     while (running) {
         cout << "Press 1 to add a board game to the shelf" << endl;
@@ -51,31 +51,52 @@ b.	When removing a board game you may want to display the attribute values set w
         switch (userInput) {
             case 1: {
                 while (true) {
-                    cout << "\n";
-                    cout << "Title of Show: " << endl;
-                    cin >> title;
-                    cout << "\n";
-                    cout << "Description of the Show: " << endl;
-                    cin >> description;
-                    if (cin.fail()) {
-                        fixBadInput();
-                        continue;
-                    } else {
+                    try {
+                        if (userShelf.getCurrGameCount() != 1) {
+                            cout << "\n";
+                            cout << "Title of Show: " << endl;
+                            cin >> title;
+                            cout << "\n";
+                            cout << "Description of the Show: " << endl;
+                            cin >> description;
+                        } else {
+                            throw GameShelf::FullShelf();
+                        } if (cin.fail()) {
+                            fixBadInput();
+                            continue;
+                        } else {
+                            cout << "\n";
+                            Show *userShow = new Show(title, description);
+                            userShelf.add(*userShow); //fix this
+                            break;
+                        }
+                    }
+                    catch (GameShelf::FullShelf) {
+                        cout << "Error: The Shelf is full. Remove a board game before adding another.";
                         cout << "\n";
-                        Show *userShow = new Show(title, description);
-                        userShelf.add(*userShow ); //fix this
                         break;
                     }
                 }
                 break;
             }
             case 2: {
-                userShelf.remove();
-                break;
+                try {
+                    cout << "\n";
+                    userShelf.remove();
+                    cout << "\n";
+                    break;
+                }
+                catch (GameShelf::EmptyShelf) {
+                    cout << "Error: The Shelf is empty.  Add a board game before removing.";
+                    cout << "\n";
+                    break;
+                }
                 //run remove and display attributes
             }
             case 3: {
-                cout << userShelf.getCurrGameCount() << endl;
+                cout << "\n";
+                cout << "This is how many games are on the shelf: " << userShelf.getCurrGameCount() << endl;
+                cout << "\n";
                 break;
                 //show how many board games are on the shelf
             }

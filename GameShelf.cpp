@@ -7,7 +7,7 @@ GameShelf::GameShelf() {
 }
 
 void GameShelf::add(Show &show) {
-    if ( currGameCount != 1 ) {
+    if ( currGameCount != 10 ) {
         shelf[currGameCount] = show;
         currGameCount++;
     } else {

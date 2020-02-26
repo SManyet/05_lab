@@ -5,7 +5,7 @@
 
 class GameShelf {
     private:
-        Show shelf[1];
+        Show shelf[10];
         int const maxGameCount = 10;
         int currGameCount;
 

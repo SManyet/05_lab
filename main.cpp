@@ -52,7 +52,7 @@ b.	When removing a board game you may want to display the attribute values set w
             case 1: {
                 while (true) {
                     try {
-                        if (userShelf.getCurrGameCount() != 1) {
+                        if (userShelf.getCurrGameCount() != 10) {
                             cout << "\n";
                             cout << "Title of Show: " << endl;
                             cin >> title;
